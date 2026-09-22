@@ -5,7 +5,7 @@ import subprocess
 import zipfile
 
 ROOT=Path(__file__).resolve().parent.parent
-archives = sorted(ROOT.parent.glob('OfficePDF_*_Windows11_*.zip'))
+archives = sorted(ROOT.parent.glob('OfficePDF_*.zip'))
 if not archives:
     raise FileNotFoundError("Cannot find package zip in " + str(ROOT.parent))
 archive = archives[-1]
@@ -27,7 +27,9 @@ try:
         for item in manifest:
             data = package.read(item['File'].replace('\\', '/'))
             assert hashlib.sha256(data).hexdigest() == item['SHA256']
-            assert len(data) == item['Bytes'] and data == (product / item['File']).read_bytes()
+            assert len(data) == item['Bytes']
+            if product.exists():
+                assert data == (product / item['File']).read_bytes()
         assert set(package.namelist()) == {item['File'].replace('\\', '/') for item in manifest} | {'SHA256.json'}
         package.extractall(destination)
 

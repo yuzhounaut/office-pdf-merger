@@ -18,7 +18,7 @@ $hashes = @(Get-ChildItem -LiteralPath $target -File -Recurse | Sort-Object Full
     [pscustomobject]@{File=$_.FullName.Substring($target.Length+1);Bytes=$_.Length;SHA256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant()}
 })
 $hashes | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $target 'SHA256.json') -Encoding UTF8
-$archive = Join-Path (Split-Path $root -Parent) 'OfficePDF_v1.4.3_Windows11_x64.zip'
+$archive = Join-Path (Split-Path $root -Parent) 'OfficePDF_v1.4.3_x64.zip'
 if (Test-Path -LiteralPath $archive) {
     if ($Force) { Remove-Item -LiteralPath $archive -Force }
     else { throw 'Archive already exists; inspect first or use -Force.' }

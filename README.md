@@ -139,7 +139,7 @@ office_pdf_gui_v1.4.3/
 ```
 
 脚本将会在项目根目录生成 `成品/` 目录，并在上级目录打包输出：
-- `OfficePDF_v1.4.3_Windows11_x64.zip`
+- `OfficePDF_v1.4.3_x64.zip`
 - `交付包SHA256.json`
 
 ---
