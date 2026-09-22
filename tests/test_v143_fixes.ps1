@@ -23,7 +23,7 @@ $job1 = [pscustomobject]@{
         [pscustomobject]@{ Path = $pdf1; Group = '散文件'; State = '待处理' }
     )
     OutputDirectory = $testOutput
-    OutputName = '18.1-杨培茵（CV、GCP、执业证书）'
+    OutputName = '18.1-杨某某（CV、GCP、执业证书）'
     PerGroup = $false
     ContinueOnError = $false
     TimeoutSeconds = 60
@@ -38,7 +38,7 @@ if ($proc1.ExitCode -ne 0) {
     throw "Worker exited with code $($proc1.ExitCode)"
 }
 
-$expectedPdf1 = Join-Path $testOutput '18.1-杨培茵（CV、GCP、执业证书）.pdf'
+$expectedPdf1 = Join-Path $testOutput '18.1-杨某某（CV、GCP、执业证书）.pdf'
 if (!(Test-Path -LiteralPath $expectedPdf1)) {
     throw "FAIL: Expected PDF not found: $expectedPdf1. Actual files in output: $(Get-ChildItem $testOutput | Select-Object -ExpandProperty Name)"
 }
@@ -54,8 +54,8 @@ foreach ($f in $outputFiles) {
 Write-Host "PASS: Output directory contains only output PDF, NO manifest/log."
 
 # Check OfficePdfData has manifest and log
-$expectedManifest1 = Join-Path $officeData '18.1-杨培茵（CV、GCP、执业证书）.清单.csv'
-$expectedLog1 = Join-Path $officeData '18.1-杨培茵（CV、GCP、执业证书）.日志.txt'
+$expectedManifest1 = Join-Path $officeData '18.1-杨某某（CV、GCP、执业证书）.清单.csv'
+$expectedLog1 = Join-Path $officeData '18.1-杨某某（CV、GCP、执业证书）.日志.txt'
 
 if (!(Test-Path -LiteralPath $expectedManifest1)) {
     throw "FAIL: Expected manifest not found in OfficePdfData: $expectedManifest1"
@@ -76,7 +76,7 @@ $job2 = [pscustomobject]@{
         [pscustomobject]@{ Path = $img1; Group = '散文件'; State = '待处理' }
     )
     OutputDirectory = $testOutput
-    OutputName = '18.1-杨培茵（CV、GCP、执业证书）.pdf'
+    OutputName = '18.1-杨某某（CV、GCP、执业证书）.pdf'
     PerGroup = $false
     ContinueOnError = $false
     TimeoutSeconds = 60
@@ -88,14 +88,14 @@ if ($proc2.ExitCode -ne 0) {
     throw "Worker exited with code $($proc2.ExitCode)"
 }
 
-$expectedPdf2 = Join-Path $testOutput '18.1-杨培茵（CV、GCP、执业证书） (2).pdf'
+$expectedPdf2 = Join-Path $testOutput '18.1-杨某某（CV、GCP、执业证书） (2).pdf'
 if (!(Test-Path -LiteralPath $expectedPdf2)) {
     throw "FAIL: Conflict PDF not found: $expectedPdf2. Actual files in output: $(Get-ChildItem $testOutput | Select-Object -ExpandProperty Name)"
 }
 Write-Host "PASS: Duplicate PDF named cleanly: $expectedPdf2"
 
-$expectedManifest2 = Join-Path $officeData '18.1-杨培茵（CV、GCP、执业证书） (2).清单.csv'
-$expectedLog2 = Join-Path $officeData '18.1-杨培茵（CV、GCP、执业证书） (2).日志.txt'
+$expectedManifest2 = Join-Path $officeData '18.1-杨某某（CV、GCP、执业证书） (2).清单.csv'
+$expectedLog2 = Join-Path $officeData '18.1-杨某某（CV、GCP、执业证书） (2).日志.txt'
 
 if (!(Test-Path -LiteralPath $expectedManifest2)) {
     throw "FAIL: Expected conflict manifest not found: $expectedManifest2"
