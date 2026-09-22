@@ -1,0 +1,57 @@
+# ==========================================
+# .gitignore for Office PDF Merger (office_pdf_gui)
+# ==========================================
+
+# Compiled Binaries & Libraries (Source repo should not track binaries)
+*.exe
+*.dll
+*.pdb
+*.obj
+*.so
+*.dylib
+
+# Build & Packaging Outputs
+/成品/
+/bin/
+/obj/
+*.zip
+build-hashes.json
+交付包SHA256.json
+
+# Extracted Third-Party Runtime (Extracted from vendor/*.zip by build.ps1)
+/qpdf/
+
+# Runtime Data & Logs
+/OfficePdfData/
+
+# Test Outputs & Temporary Directories
+/tests/output_test/
+/tests/temp_*/
+/tests/native-icons/
+/tests/packaged-native-icons/
+/tests/*.txt
+/tests/*.json
+
+# Keep test fixtures intact
+!/tests/fixtures/**
+
+# Visual Studio & IDEs
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# OS Generated Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+$RECYCLE.BIN/

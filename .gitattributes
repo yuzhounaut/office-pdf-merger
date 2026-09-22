@@ -1,0 +1,27 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# Windows source files use CRLF
+*.cs text eol=crlf
+*.xaml text eol=crlf
+*.manifest text eol=crlf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Markdown and documentation
+*.md text
+*.txt text
+*.json text
+
+# Binary files
+*.ico binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text
+*.zip binary
+*.pdf binary
+*.exe binary
+*.dll binary

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Office PDF — 资料合并</title>
+  <desc>蓝色圆角方块内叠放的文档，前景为白色折角纸张和红色 PDF 标识。全部为矢量路径。</desc>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#238CF4"/>
+      <stop offset="1" stop-color="#0056B4"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6864"/>
+      <stop offset="1" stop-color="#E54250"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#tile)" d="M17 3H47Q61 3 61 17V47Q61 61 47 61H17Q3 61 3 47V17Q3 3 17 3Z"/>
+  <path fill="#004A9C" opacity="0.22" d="M18 22H40Q44 22 44 26V55Q44 59 40 59H18Q14 59 14 55V26Q14 22 18 22Z"/>
+  <path fill="#A6D6FF" d="M17 20H36Q40 20 40 24V51Q40 55 36 55H17Q13 55 13 51V24Q13 20 17 20Z"/>
+  <path fill="#004A9C" opacity="0.18" d="M27 13H44L54 23V50Q54 55 49 55H27Q22 55 22 50V18Q22 13 27 13Z"/>
+  <path fill="#FFFFFF" d="M27 11H43L52 20V47Q52 52 47 52H27Q22 52 22 47V16Q22 11 27 11Z"/>
+  <path fill="#D3E9FF" d="M43 11V16Q43 20 47 20H52Z"/>
+  <path fill="#69A9E8" d="M29 26H43Q44 26 44 27.5Q44 29 43 29H29Q28 29 28 27.5Q28 26 29 26Z"/>
+  <path fill="#A8CEF1" d="M29 32H39Q40 32 40 33.5Q40 35 39 35H29Q28 35 28 33.5Q28 32 29 32Z"/>
+  <path fill="#AB2945" opacity="0.18" d="M26 40H53Q57 40 57 44V54Q57 59 52 59H27Q22 59 22 54V44Q22 40 26 40Z"/>
+  <path fill="url(#badge)" d="M26 38H53Q57 38 57 42V53Q57 57 53 57H26Q22 57 22 53V42Q22 38 26 38Z"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M28 43H31Q35 43 35 46.5Q35 50 31 50H30V53H28Z M30 45V48H31Q33 48 33 46.5Q33 45 31 45Z"/>
+  <path fill="#FFFFFF" fill-rule="evenodd" d="M37 43H40Q45 43 45 48Q45 53 40 53H37Z M39 45V51H40Q43 51 43 48Q43 45 40 45Z"/>
+  <path fill="#FFFFFF" d="M47 43H53V45H49V47H52V49H49V53H47Z"/>
+</svg>
